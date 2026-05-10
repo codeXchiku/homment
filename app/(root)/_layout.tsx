@@ -1,8 +1,13 @@
+import { useUserSync } from '@/hooks/useUserSync'
 import { useAuth } from '@clerk/expo'
-import { Redirect, Stack } from 'expo-router'
+import { Redirect, Slot } from 'expo-router'
 
 export default function AuthRoutesLayout() {
   const { isSignedIn, isLoaded } = useAuth()
+
+
+  //sync clerk user -> supabase
+  useUserSync();
 
   if (!isLoaded) {
     return null
@@ -12,5 +17,5 @@ export default function AuthRoutesLayout() {
     return <Redirect href="/signIn" />
   }
 
-  return <Stack screenOptions={{headerShown:false}}/>
+  return <Slot/>
 }
