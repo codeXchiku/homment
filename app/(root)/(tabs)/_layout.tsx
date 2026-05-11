@@ -30,7 +30,7 @@ function AndroidTabs() {
         name='create'
         options={{
           title: "Add",
-          href:isAdmin?undefined:null,
+          href: isAdmin ? undefined : null,
           tabBarIcon: ({ color, size }) => (
             <Ionicons name='add-circle' color={color} size={size} />
           )
@@ -54,7 +54,7 @@ function AndroidTabs() {
           )
         }}
       />
-      
+
     </Tabs>
   );
 }
