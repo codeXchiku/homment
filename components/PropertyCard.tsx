@@ -72,16 +72,16 @@ const PropertyCard = ({ property, onUnsave, showSave = false }: {
                     </View>
                 </View>
             </View>
-            
-                <TouchableOpacity 
+
+            <TouchableOpacity
                 className='w-10 items-center pt-3'
-                >
-                    <Ionicons
-                        name={isSaved ? "heart" : "heart-outline"}
-                        size={18}
-                        color={isSaved ? "#EF4444" : "#9CA3AF"}
-                    />
-                </TouchableOpacity>
+            >
+                <Ionicons
+                    name={isSaved ? "heart" : "heart-outline"}
+                    size={18}
+                    color={isSaved ? "#EF4444" : "#9CA3AF"}
+                />
+            </TouchableOpacity>
         </TouchableOpacity>
     )
 }

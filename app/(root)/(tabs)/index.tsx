@@ -56,9 +56,6 @@ const Index = () => {
     }
   }
 
-  // console.log(featured,recommended);
-
-
   useFocusEffect(
     useCallback(() => {
       fetchProperties()
@@ -94,6 +91,14 @@ const Index = () => {
               className='mx-5 mb-6 flex-row items-center bg-white rounded-2xl px-4 py-3 gap-3'>
               <Ionicons name='search-outline' size={20} color="#9CA3AF" />
               <Text className='text-gray-400 text-sm flex-1'>Search Properties, cities...</Text>
+              <TouchableOpacity
+                onPress={() =>
+                  router.push("/search?openFilters=true")
+                }
+                className="w-8 h-8 bg-blue-600 rounded-xl items-center justify-center"
+              >
+                <Ionicons name="options-outline" size={15} color="white" />
+              </TouchableOpacity>
             </TouchableOpacity>
             {/* Featured Section */}
             <View className='mb-6'>
