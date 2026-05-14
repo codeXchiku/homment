@@ -15,7 +15,7 @@ const PropertyCard = ({ property, onUnsave, showSave = false }: {
 
     return (
         <TouchableOpacity
-            // onPress={() => router.push("/propertyDetails")}
+            onPress={() => router.push(`/(root)/property/${property.id}`)}
             className="flex-row bg-white rounded-2xl mb-4 overflow-hidden"
             style={{
                 shadowColor: "#000",

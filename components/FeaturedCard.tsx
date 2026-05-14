@@ -13,7 +13,7 @@ const FeaturedCard = ({ property }: { property: Property }) => {
             style={{
                 opacity: property.is_sold ? 0.5 : 1,
             }}
-            onPress={() => router.push("/propertyDetails")}
+            onPress={() => router.push(`/(root)/property/${property.id}`)}
         >
             <Image
                 source={{ uri: property.images[0] }}

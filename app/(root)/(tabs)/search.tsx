@@ -138,7 +138,7 @@ const search = () => {
           </TouchableOpacity>
         </View>
         {/* filter chips */}
-        
+
         {activeFilterCount > 0 && (
           <View className="flex-row flex-wrap gap-2 mt-3">
             {type && (
@@ -170,8 +170,8 @@ const search = () => {
                   {minPrice && maxPrice
                     ? `${formatPrice(minPrice)} – ${formatPrice(maxPrice)}`
                     : minPrice
-                    ? `From ${formatPrice(minPrice)}`
-                    : `Up to ${formatPrice(maxPrice!)}`}
+                      ? `From ${formatPrice(minPrice)}`
+                      : `Up to ${formatPrice(maxPrice!)}`}
                 </Text>
                 <TouchableOpacity
                   onPress={() => {
@@ -187,7 +187,7 @@ const search = () => {
         )}
       </View>
       {/* results */}
-         <FlatList
+      <FlatList
         data={results}
         keyExtractor={(item) => item.id}
         contentContainerStyle={{ padding: 20, paddingBottom: 100 }}
@@ -216,8 +216,8 @@ const search = () => {
       />
 
       <FilterModal
-      visible={showFilters}
-      onClose={()=>setShowFilters(false)}
+        visible={showFilters}
+        onClose={() => setShowFilters(false)}
       />
     </SafeAreaView>
   )
